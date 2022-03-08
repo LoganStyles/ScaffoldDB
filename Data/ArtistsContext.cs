@@ -19,6 +19,7 @@ namespace ScaffoldDB.Data
 
         public virtual DbSet<Album> Albums { get; set; } = null!;
         public virtual DbSet<Employee> Employees { get; set; } = null!;
+        public virtual DbSet<HighEarningEmployee> HighEarningEmployees { get; set; } = null!;
         public virtual DbSet<Studio> Studios { get; set; } = null!;
         public virtual DbSet<Tag> Tags { get; set; } = null!;
 
@@ -52,6 +53,11 @@ namespace ScaffoldDB.Data
 
                             j.ToTable("AlbumTags");
                         });
+            });
+
+            modelBuilder.Entity<HighEarningEmployee>(entity =>
+            {
+                entity.ToView("HighEarningEmployees");
             });
 
             modelBuilder.Entity<Studio>(entity =>
