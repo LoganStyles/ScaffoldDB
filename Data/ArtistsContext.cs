@@ -65,3 +65,7 @@ namespace ScaffoldDB.Data
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
+
+
+
+

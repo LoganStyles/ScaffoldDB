@@ -18,3 +18,6 @@ namespace ScaffoldDB.Entities
         public virtual Employee Employee { get; set; } = null!;
     }
 }
+
+
+

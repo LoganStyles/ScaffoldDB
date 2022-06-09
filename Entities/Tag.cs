@@ -19,3 +19,7 @@ namespace ScaffoldDB.Entities
         public virtual ICollection<Album> Albums { get; set; }
     }
 }
+
+
+
+

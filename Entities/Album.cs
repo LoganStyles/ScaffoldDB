@@ -25,3 +25,6 @@ namespace ScaffoldDB.Entities
         public virtual ICollection<Tag> Tags { get; set; }
     }
 }
+
+
+
