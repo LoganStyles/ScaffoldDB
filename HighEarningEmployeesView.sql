@@ -7,3 +7,6 @@ Employees AS Emp INNER JOIN
 Studios AS Std ON Emp.Id=Std.EmployeeId INNER JOIN
 Albums AS Alb ON Emp.Id=Alb.EmployeeId
 WHERE Alb.Price >3000;
+
+
+
