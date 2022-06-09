@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace ScaffoldDB.Entities
 {
@@ -22,3 +19,7 @@ namespace ScaffoldDB.Entities
         public virtual ICollection<Album> Albums { get; set; }
     }
 }
+
+
+
+

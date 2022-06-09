@@ -9,3 +9,8 @@ INSERT INTO Studios values(3,44,'Lekki',2);
 INSERT INTO Albums values(1,'Blue Fire',2000,2);
 INSERT INTO Albums values(2,'Raging Heart',3850,3);
 INSERT INTO Albums values(3,'Fixated on you',4000,1);
+
+
+
+
+

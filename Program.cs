@@ -10,3 +10,8 @@ foreach (var artist in artistDetails)
         $"Artist: {Encoding.UTF8.GetString(artist.Name)}, Album: {artist.AlbumName} "
     );
 }
+
+
+
+
+

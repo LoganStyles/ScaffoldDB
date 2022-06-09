@@ -33,3 +33,8 @@ CREATE TABLE IF NOT EXISTS AlbumTags(
     FOREIGN KEY(TagId) REFERENCES Tags(Id) ON DELETE CASCADE,
     PRIMARY KEY(AlbumId, TagId)
 );
+
+
+
+
+
