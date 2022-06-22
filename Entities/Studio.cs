@@ -21,3 +21,19 @@ namespace ScaffoldDB.Entities
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
