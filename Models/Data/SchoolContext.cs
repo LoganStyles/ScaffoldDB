@@ -17,9 +17,9 @@ namespace ScaffoldDB.Models.Data
         {
         }
 
-        public virtual DbSet<Course> Courses { get; set; } = null!;
-        public virtual DbSet<Instructor> Instructors { get; set; } = null!;
-        public virtual DbSet<Student> Students { get; set; } = null!;
+        public virtual DbSet<Course> Courses { get; set; }
+        public virtual DbSet<Instructor> Instructors { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -37,10 +37,26 @@ namespace ScaffoldDB.Models.Data
                 entity.HasIndex(e => e.InstructorId, "IX_Courses_InstructorId")
                     .IsUnique();
 
+                entity.Property(e => e.Title).IsRequired();
+
                 entity.HasOne(d => d.Instructor)
                     .WithOne(p => p.Course)
                     .HasForeignKey<Course>(d => d.InstructorId)
                     .OnDelete(DeleteBehavior.ClientSetNull);
+            });
+
+            modelBuilder.Entity<Instructor>(entity =>
+            {
+                entity.Property(e => e.FirstName).IsRequired();
+
+                entity.Property(e => e.LastName).IsRequired();
+            });
+
+            modelBuilder.Entity<Student>(entity =>
+            {
+                entity.Property(e => e.FirstName).IsRequired();
+
+                entity.Property(e => e.LastName).IsRequired();
             });
 
             OnModelCreatingPartial(modelBuilder);
